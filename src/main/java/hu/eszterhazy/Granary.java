@@ -3,10 +3,10 @@ package hu.eszterhazy;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class Granary {
+public class Granary implements GranaryProducer, GrandaryConsumer{
 
     public static int Limit = 3000;
-    private Queue<Product> productQueue = new PriorityQueue<>();
+    private Queue<Product> productQueue = new PriorityQueue<>(Limit);
 
     private static final Granary instance = new Granary();
 
